@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+version = '1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets.main.java.srcDirs = ['src']
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'main.java.com.exceptionhandling.App'
+    }
+}
+
+//Get dependencies from Maven central repository
+repositories {
+    mavenCentral()
+}
